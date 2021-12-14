@@ -18,9 +18,9 @@ body {
 
   max-width: 20.4375rem;
   margin: 1em;
+  overflow: hidden;
 
   &__item {
-    border-radius: var(--br-primary);
     padding: 3.2em;
   }
 
@@ -41,9 +41,6 @@ body {
   }
 
   &__image {
-    width: auto;
-    height: auto;
-
     margin-bottom: 2em;
   }
 
