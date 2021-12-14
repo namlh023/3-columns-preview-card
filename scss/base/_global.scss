@@ -1,0 +1,108 @@
+@use "./font";
+@use "./reset";
+@use "./root";
+
+body {
+  font-family: var(--ff-primary);
+  font-size: var(--fs-primary);
+  color: var(--clr-neutral-white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--clr-primary-orange);
+  border-radius: var(--br-primary);
+
+  max-width: 20.4375rem;
+  margin: 1em;
+
+  &__item {
+    border-radius: var(--br-primary);
+    padding: 3.2em;
+  }
+
+  &__title {
+    font-family: var(--ff-secondary);
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+
+    color: var(--clr-neutral-gray);
+  }
+
+  &__subtitle {
+    line-height: 1.6em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+  }
+
+  &__image {
+    width: auto;
+    height: auto;
+
+    margin-bottom: 2em;
+  }
+
+  &__button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.8em 2em;
+    background-color: var(--clr-neutral-gray);
+    border: 2px solid var(--clr-neutral-white);
+    border-radius: 1.5625em;
+    line-height: 1.6em;
+
+    &--orange {
+      color: var(--clr-primary-orange);
+      &:hover {
+        background-color: var(--clr-primary-orange);
+        color: var(--clr-neutral-white);
+      }
+    }
+
+    &--cyan {
+      color: var(--clr-primary-cyan);
+      &:hover {
+        background-color: var(--clr-primary-cyan);
+        color: var(--clr-neutral-white);
+      }
+    }
+
+    &--dark-cyan {
+      color: var(--clr-primary-dark-cyan);
+      &:hover {
+        background-color: var(--clr-primary-dark-cyan);
+        color: var(--clr-neutral-white);
+      }
+    }
+  }
+
+  &__sedans {
+    background-color: var(--clr-primary-orange);
+  }
+
+  &__suvs {
+    background-color: var(--clr-primary-cyan);
+  }
+
+  &__luxury {
+    background-color: var(--clr-primary-dark-cyan);
+  }
+}
+
+@media (min-width: 90em) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    max-width: 57.5rem;
+
+    &__subtitle {
+      margin-bottom: 5.5em;
+    }
+  }
+}
